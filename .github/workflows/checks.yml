@@ -13,6 +13,8 @@ jobs:
         with:
           username: ${{ secrets.DOCKERHUB_USER}}
           password: ${{ secrets.DOCKERHUB_TOKEN}}
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
       - name: checkout
         uses: actions/checkout@v2
       - name: Install Docker Compose
